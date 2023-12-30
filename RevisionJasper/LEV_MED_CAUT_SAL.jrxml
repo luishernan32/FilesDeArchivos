@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LEV_MED_CAUT_RETENCION_SAL" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9a4b655b-0f69-40d7-8ec3-560c3a2c6bd9">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="ireport.zoom" value="1.4641000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="IMAGE_DIR_KEY" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR_KEY" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="PREVIEW_KEY" class="java.lang.Boolean">
+		<defaultValueExpression><![CDATA[false]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NOW_YEAR" class="java.util.Date">
+		<defaultValueExpression><![CDATA[new Date().getYear()]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NOW_MONTH" class="java.util.Date">
+		<defaultValueExpression><![CDATA[new Date().getMonth()]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NOW_DAY" class="java.util.Date">
+		<defaultValueExpression><![CDATA[new Date().getDay()]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NOW_HOUR" class="java.util.Date">
+		<defaultValueExpression><![CDATA[new Date().getHours() +" : "+ new Date().getMinutes()+" : "+new Date().getSeconds()]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="N_DOCUMENTO_INFRACTOR" class="java.lang.String"/>
+	<field name="FIRMA_FUNCIONARIO_" class="java.lang.String"/>
+	<field name="LogoATM_variable" class="java.lang.String"/>
+	<field name="BANCO" class="java.lang.String"/>
+	<field name="NUMERO_JUICIO" class="java.lang.String"/>
+	<field name="FECHA_TEXTO" class="java.lang.String"/>
+	<field name="HORA" class="java.lang.String"/>
+	<field name="NOMBRE_COMPLETO" class="java.lang.String"/>
+	<field name="NOMBRE_ABOGADO_ASIG" class="java.lang.String"/>
+	<field name="NOMBRE_ABOGADO" class="java.lang.String"/>
+	<field name="OTROS" class="java.lang.String"/>
+	<field name="NUMERO_TRAMITE" class="java.lang.String"/>
+	<field name="FIRMA_AGENTE" class="java.lang.String"/>
+	<field name="numero_consecutivo" class="java.lang.String"/>
+	<field name="CODIGO_QR" class="java.lang.String"/>
+	<field name="NRO_CUENTA" class="java.lang.String"/>
+	<background>
+		<band height="752" splitType="Stretch">
+			<printWhenExpression><![CDATA[$P{PREVIEW_KEY}.booleanValue()]]></printWhenExpression>
+			<image scaleImage="FillFrame" isUsingCache="false" isLazy="true" onErrorType="Blank">
+				<reportElement x="-28" y="0" width="612" height="736" isPrintWhenDetailOverflows="true" uuid="b85a9754-25c9-4880-8d6c-025da15abd5e">
+					<printWhenExpression><![CDATA[$P{PREVIEW_KEY}]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$P{IMAGE_DIR_KEY} + "marca_preliminar.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<pageHeader>
+		<band height="71" splitType="Stretch">
+			<image isLazy="true" onErrorType="Blank">
+				<reportElement stretchType="RelativeToBandHeight" x="210" y="0" width="118" height="71" uuid="7cb811f8-655a-4f77-a04d-3d0e554465d9"/>
+				<imageExpression><![CDATA[$F{LogoATM_variable}]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="681">
+			<textField>
+				<reportElement x="0" y="151" width="558" height="277" uuid="b31cbe20-a92b-47f0-91de-319b6d8f3388"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Continuando con la sustanciación del procedimiento coactivo # "+$F{NUMERO_JUICIO}+", puesto en mi despacho el día de hoy, seguido en contra de "+$F{NOMBRE_COMPLETO}+" con identificación número "+$F{N_DOCUMENTO_INFRACTOR}+", dispongo lo siguiente: PRIMERO.- Se posesiona en el cargo de secretaria ad-hoc en el presente procedimiento coactivo "+$F{NOMBRE_ABOGADO_ASIG}+", misma que manifiesta que acepta el cargo y jura desempeño fiel y legalmente, firmando para constancia en unidad de acto, con el delegado del Director de Gestión de Infracciones y Servicios de Tránsito. SEGUNDO. - Revisado el sistema AXIS, el cual opera en esta institución se ha podido constatar que a la presente fecha la contravención de tránsito que dio origen a este procedimiento coactivo se encuentra pendiente, habiendo el coactivado presentado documentación suficiente que avala que se ha realizado una retención en la cuenta bancaria "+$F{NRO_CUENTA}+" donde recibe su remuneración, esta autoridad en cumplimiento de lo dispuesto en el artículo 328 de la Constitución de la República, dispone lo siguiente:  1).- SE LEVANTEN TODAS LAS MEDIDAS CAUTELARES Y DE EJECUCION en contra de "+$F{NOMBRE_COMPLETO}+" con identificación número "+$F{N_DOCUMENTO_INFRACTOR}+", en su calidad de deudor principal, dentro de este procedimiento coactivo, para el cumplimiento de este mandato, ofíciese a la Superintendencia de Bancos del Ecuador y "+$F{BANCO}+" donde el coactivado mantiene cuentas con orden de retención y en caso de existir valores retenidos dichas instituciones habiliten los fondos y sean consignados a la cuenta de su titular. CÚMPLASE, NOTIFÍQUESE Y OFÍCIESE. - f) "+$F{NOMBRE_ABOGADO}+" Delegado Funcionario Ejecutor del Director de Infracciones y Servicios de Transito de la Autoridad de Tránsito Municipal.; f) "+$F{NOMBRE_ABOGADO_ASIG}+", en calidad de SECRETARIA QUE CERTIFICA. - LO QUE COMUNICO A USTED PARA FINES DE LEY,"+$F{FECHA_TEXTO}+"."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="1" width="556" height="43" uuid="06bdf64a-109d-4a62-8c26-309835825201"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["A:"+ $F{BANCO}+", DENTRO DEL PROCEDIMIENTO COACTIVO No. "+$F{NUMERO_JUICIO}+", SE LE HACE CONOCER EL CONTENIDO DE LA PROVIDENCIA QUE SE TRANSCRIBE:"]]></textFieldExpression>
+			</textField>
+			<image isLazy="true" onErrorType="Blank">
+				<reportElement x="199" y="440" width="180" height="61" uuid="04ef15dc-1a0b-4bbf-905f-5d6c1f39d885"/>
+				<imageExpression><![CDATA[$F{FIRMA_FUNCIONARIO_}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="-1" y="113" width="558" height="14" uuid="b22cd962-b895-4df4-8bc8-5b675547f3c5">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PROCEDIMIENTO COACTIVO No."+$F{NUMERO_JUICIO}+"."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="501" width="558" height="13" uuid="ac87deb1-a9b4-4015-9602-a58f59928d58"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOMBRE_ABOGADO_ASIG}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="515" width="558" height="13" uuid="d89bb219-12be-4ae2-9208-fd75e874bd49"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Secretaria ad-hoc"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="44" width="556" height="28" uuid="f3988ba8-08ca-4548-885f-63d4ea9f9eff"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["AUTORIDAD DE TRANSITO MUNICIPAL DIRECCIÓN DE GESTIÓN DE INFRACCIONES DE SERVICIOS DE TRÁNSITO"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="76" width="556" height="37" uuid="73b08710-290a-4773-8314-44b22d60c1ce"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="11" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EMPRESA PÚBLICA MUNICIPAL DE TRÁNSITO Y MOVILIDAD DE GUAYAQUIL, E.P."+"\n"+"NÚMERO DE TRÁMITE:"+($F{NUMERO_TRAMITE}==null?" ":$F{NUMERO_TRAMITE})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="127" width="558" height="14" uuid="55a67bda-e30e-41ae-a291-da0ad3bc0b36">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Guayaquil, "+$F{FECHA_TEXTO}+", a las "+$F{HORA}+"."]]></textFieldExpression>
+			</textField>
+			<image isLazy="true" onErrorType="Blank">
+				<reportElement x="376" y="549" width="180" height="61" uuid="6e0c7067-ed44-4553-9f38-54547db1f1ba"/>
+				<imageExpression><![CDATA[$F{CODIGO_QR}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="379" y="610" width="177" height="20" uuid="75e37a78-605e-44bb-9c97-ad5f21acc47e"/>
+				<textFieldExpression><![CDATA[($F{NUMERO_TRAMITE}==null?" ":"Número trámite: "+$F{NUMERO_TRAMITE})]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="630" splitType="Prevent">
+			<textField>
+				<reportElement x="10" y="225" width="558" height="111" uuid="9b0512ca-e2a0-4f0c-b437-7833cd3cf0c5"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="11" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["“…1).- SE LEVANTEN TODAS LAS MEDIDAS CAUTELARES y de EJECUCION, en contra de "+$F{NOMBRE_COMPLETO}+" con identificación número "+$F{N_DOCUMENTO_INFRACTOR}+", en su calidad de deudor principal, dentro de este procedimiento coactivo, para el cumplimiento de este mandato, ofíciese a la Superintendencia de Bancos del Ecuador y "+$F{BANCO}+", donde la coactivada mantiene cuentas con orden de retención y embargo en caso de existir valores retenidos dichas instituciones habiliten los fondos y sean consignados a la cuenta de su titular…” "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="12" y="10" width="556" height="40" uuid="fd2d40c7-2469-4bc9-aa26-06b708e681ef"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="11" isBold="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Guayaquil, "+$F{FECHA_TEXTO}+"\n"+"Oficio No. ATM -"+$F{numero_consecutivo}+"\n"+"Procedimiento Coactivo No. "+$F{NUMERO_JUICIO}+"\n"]]></textFieldExpression>
+			</textField>
+			<image isLazy="true" onErrorType="Blank">
+				<reportElement x="209" y="422" width="180" height="61" uuid="e98d6190-df4c-4ed1-ab37-7aa363441f8e"/>
+				<imageExpression><![CDATA[$F{FIRMA_AGENTE}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="10" y="483" width="558" height="13" uuid="734a7b4d-55cf-4005-b346-1d6bc0c46eec"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOMBRE_ABOGADO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="497" width="558" height="48" uuid="0a01be9c-06d9-43cd-945e-207d2d6b6e52"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["DELEGADO FUNCIONARIO EJECUTOR DEL DIRECTOR DE GESTIÓN"+"\n"+
+"DE INFRACCIONES Y SERVICIOS DE TRÁNSITO DE LA AUTORIDAD DE"+"\n"+
+"TRÁNSITO MUNICIPAL"+"\n"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="11" y="76" width="556" height="38" uuid="9dadd824-7442-4b46-b6a3-cef6f11c74e9"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="11" isBold="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Señores"+"\n"+$F{BANCO}+"\n"+"CIUDAD. - "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="119" width="556" height="20" uuid="cec6cb26-c47a-48be-9fe1-3f8c88a8c9ec"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="11" isBold="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["De mis consideraciones:  "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="12" y="143" width="558" height="81" uuid="ce090de7-0b04-4542-940f-74fb90b5cdac">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Se pone en conocimiento, la providencia de fecha, "+$F{FECHA_TEXTO}+", a las "+$F{HORA}+" , del procedimiento coactivo No. "+$F{NUMERO_JUICIO}+", que se sigue en contra de "+$F{NOMBRE_COMPLETO}+" con identificación número "+$F{N_DOCUMENTO_INFRACTOR}+", suscrita por el "+$F{NOMBRE_ABOGADO}+" Funcionario Ejecutor del Director de Infracciones y Servicios de Tránsito de la Autoridad de Tránsito Municipal. - Cúmpleme en transcribir la parte pertinente de la mismas:"]]></textFieldExpression>
+			</textField>
+			<image isLazy="true" onErrorType="Blank">
+				<reportElement x="384" y="549" width="180" height="61" uuid="38c2a8d7-7912-40b3-99f2-6d40c1f3602d"/>
+				<imageExpression><![CDATA[$F{CODIGO_QR}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="386" y="609" width="177" height="20" uuid="6fd64e5e-12a8-4b94-b76c-f3ac00427f7a"/>
+				<textFieldExpression><![CDATA[($F{NUMERO_TRAMITE}==null?" ":"Número trámite: "+$F{NUMERO_TRAMITE})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="12" y="337" width="554" height="20" uuid="efc14d52-b98a-4e23-bfb7-51489599d59a"/>
+				<textFieldExpression><![CDATA["Agradecido por la atención prestada al presente. "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="368" width="303" height="20" uuid="0478028c-29ab-4ef6-bac3-fe069f9bcdc3"/>
+				<textFieldExpression><![CDATA["Atentamente,  "]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

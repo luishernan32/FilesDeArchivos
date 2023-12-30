@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CaratulaCursoVirtual_V1" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9bfb5874-be1e-45bd-b38b-2a7acc510f17">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="528"/>
+	<parameter name="IMAGE_DIR_KEY" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR_KEY" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="PREVIEW_KEY" class="java.lang.Boolean">
+		<defaultValueExpression><![CDATA[false]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="LogoATM_variable" class="java.lang.String"/>
+	<field name="numero_consecutivo" class="java.lang.String"/>
+	<field name="ANIO_EXPEDIENTE" class="java.lang.String"/>
+	<field name="NOMBRE_INFRACTOR" class="java.lang.String"/>
+	<field name="numero_citacion" class="java.lang.String"/>
+	<field name="DESCRIPCION_INFRACCION" class="java.lang.String"/>
+	<field name="DIRECCION_INFRACCION" class="java.lang.String"/>
+	<field name="FECHA_TEXTO" class="java.lang.String"/>
+	<background>
+		<band height="750">
+			<image scaleImage="FillFrame" isUsingCache="false" isLazy="true" onErrorType="Blank">
+				<reportElement x="-18" y="0" width="590" height="750" isPrintWhenDetailOverflows="true" uuid="c606618a-5674-45aa-9a98-bc3a85775461">
+					<printWhenExpression><![CDATA[$P{PREVIEW_KEY}]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$P{IMAGE_DIR_KEY} + "marca_preliminar.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<pageHeader>
+		<band height="80" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="73" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="7" width="550" height="30" uuid="c0482738-b01a-4345-94e4-3185ca16b5a4">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="21" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Empresa Pública Municipal de ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="37" width="550" height="30" uuid="b1254589-5cfc-4c6d-ac76-4aabcfa54342">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="21" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tránsito y Movilidad de Guayaquil, EPMTMG]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="462" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="26" width="400" height="15" uuid="55230299-83fb-4460-be35-1739bae3f733">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="1"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[ORDENANZA PARA LA SUSTITUCIÓN DE VALORES DE MULTAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="75" y="43" width="410" height="15" uuid="3c781ab1-b4c2-44fe-a1b0-daeb138c395f">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="1"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[RELACIONADAS CON LA CIRCULACIÓN VEHICULAR, POR EDUCACIÓN VIAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="59" width="400" height="15" uuid="4bef1f70-d7d5-45c2-897b-be5b968f9fd2">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box bottomPadding="1"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Y TRABAJO COMUNITARIO]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="10" y="94" width="550" height="55" uuid="7e3e331e-0e12-4d52-966f-618894626a25"/>
+				<textElement textAlignment="Center">
+					<font size="43" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numero_consecutivo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="80" y="197" width="100" height="18" uuid="deb27d79-aaec-4a63-868c-2ab823e75d2e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SOLICITANTE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="252" width="100" height="18" uuid="b29806d2-9d6a-493b-a1e6-16ed01a67a5d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INFRACCIÓN:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="311" width="100" height="18" uuid="278cc1b0-755b-4482-93de-92a7204d8157"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LUGAR:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="371" width="130" height="18" uuid="3432e27d-c335-4e7a-b7b9-c009c27e27e2">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. DE CITACIÓN:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="440" width="100" height="18" uuid="be2a23d9-c63c-4766-afe1-537413277f65"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRESENTACIÓN:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="224" y="197" width="286" height="48" uuid="432b8cce-9fb3-423d-b391-6cbb20d2b222">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="html">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<strong>"+$F{NOMBRE_INFRACTOR}+"</strong>"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="224" y="252" width="286" height="48" uuid="d04a500a-fed2-48cf-890d-17ebec20763c">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DESCRIPCION_INFRACCION}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="224" y="311" width="286" height="48" uuid="8c4fb15b-835f-4cc9-b9c0-ee72302c1c6d">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DIRECCION_INFRACCION}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="224" y="371" width="286" height="18" uuid="75cebbd3-553e-4807-a322-ce3feb663ff5">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numero_citacion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="224" y="440" width="286" height="18" uuid="5a9e0b03-f09f-4fe2-8cb5-8e7e6c9f499f">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Guayaquil, "+$F{FECHA_TEXTO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

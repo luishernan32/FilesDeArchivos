@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CertificadoCursoVirtual_V2" pageWidth="710" pageHeight="510" orientation="Landscape" columnWidth="710" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="e2f9cc1c-5b45-469b-bc87-bd25a52aec3f">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="15"/>
+	<parameter name="IMAGE_DIR_KEY" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="NOMBRE_INFRACTOR" class="java.lang.String"/>
+	<field name="DESCRIPCION_INFRACCION" class="java.lang.String"/>
+	<field name="CALIFICACION_CURSO" class="java.lang.String"/>
+	<field name="FECHA_APROBACION_CURSO" class="java.lang.String"/>
+	<field name="NUMERO_RESOLUCION" class="java.lang.String"/>
+	<field name="TEXTO_NOMBRE_1" class="java.lang.String"/>
+	<field name="IMAGEN_FONDO" class="java.lang.String"/>
+	<background>
+		<band height="509" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image>
+				<reportElement stretchType="RelativeToBandHeight" x="5" y="7" width="700" height="500" uuid="a4af2247-0ab8-452e-b66f-59d1ab9b8f03">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["https://gacetamultas.atm.gob.ec/imagenes/img/background_certificado_virtual_v3.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<detail>
+		<band height="509" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="30" y="207" width="650" height="48" forecolor="#312A61" uuid="a8e504db-7e08-40a1-af87-0721284766fb">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="32" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOMBRE_INFRACTOR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="10" y="482" width="250" height="22" uuid="5c70577c-57da-4c6b-80cb-cb536d44b8d7"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FECHA_APROBACION_CURSO}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="490" y="482" width="199" height="22" uuid="f168ddff-756b-4403-8490-baebb6ae9a22"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NUMERO_RESOLUCION}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="410" y="312" width="197" height="36" forecolor="#312A61" uuid="1d378f9c-f4d4-4d27-b510-1e4106320370"/>
+				<textElement textAlignment="Left">
+					<font size="28" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CALIFICACION_CURSO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="378" width="650" height="65" forecolor="#34A7DF" uuid="ca20ab67-d533-43b1-9016-dfc756b848bf">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="17" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DESCRIPCION_INFRACCION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="63" y="348" width="580" height="30" forecolor="#312A61" uuid="628a8d4f-68c2-455a-8e93-5899c5ea403f">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="15" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TEXTO_NOMBRE_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

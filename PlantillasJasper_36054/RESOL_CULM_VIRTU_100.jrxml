@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ResolucionCulminacion" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="72" isSummaryNewPage="true" whenResourceMissingType="Error" uuid="7b95d816-bb11-40bb-91ab-0d32d4ff1e0a">
+	<property name="ireport.zoom" value="1.1000000000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="7"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="CONSECUTIVO_RES" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="NOMBRE_INFRACTOR" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="DESCRIP_INFRACCION" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="LUGAR_INFRACCION" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="NUMERO_CITACION" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="FECHA_CITACION" class="java.util.Date" isForPrompting="false"/>
+	<parameter name="MEMORANDO_NOMBRA" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="FECHA_NOMBRA" class="java.util.Date" isForPrompting="false"/>
+	<parameter name="NUMERO_IDENTIFICACION" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="NUMERO_RECAUDO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="FECHA_RECAUDO" class="java.util.Date" isForPrompting="false"/>
+	<parameter name="NOMBRE_FUNCIONARIO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="Logo" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["."+File.separator+"logos"+File.separator+"atmLogo.jpg"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Consecutivo" class="java.lang.String"/>
+	<parameter name="NombreInfractor" class="java.lang.String"/>
+	<parameter name="NumeroIdentificacion" class="java.lang.String"/>
+	<parameter name="FechaFirmaCompromiso" class="java.lang.String"/>
+	<parameter name="DescripcionMulta" class="java.lang.String"/>
+	<parameter name="FuncionarioAtm" class="java.lang.String"/>
+	<parameter name="CargoFuncionarioAtm" class="java.lang.String"/>
+	<parameter name="fechaCargoFuncionario" class="java.lang.String"/>
+	<parameter name="NroCitacion" class="java.lang.String"/>
+	<parameter name="LugarMulta" class="java.lang.String"/>
+	<parameter name="FechaMulta" class="java.lang.String"/>
+	<parameter name="IdDocPago" class="java.lang.String"/>
+	<parameter name="Banco" class="java.lang.String"/>
+	<parameter name="FechaPago" class="java.lang.String"/>
+	<parameter name="IMAGE_DIR_KEY" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR_KEY" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="PREVIEW_KEY" class="java.lang.Boolean">
+		<defaultValueExpression><![CDATA[false]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="FIRMA_FUNCIONARIO_" class="java.lang.String"/>
+	<field name="LogoATM_variable" class="java.lang.String"/>
+	<field name="N_DOCUMENTO_INFRACTOR" class="java.lang.String"/>
+	<field name="NOMBRE_INFRACTOR" class="java.lang.String"/>
+	<field name="F_IMPOSICION_COMPARENDO" class="java.lang.String"/>
+	<field name="numero_citacion" class="java.lang.String"/>
+	<field name="NOMBRE_SECRETARIO" class="java.lang.String"/>
+	<field name="IMAGEN_FIRMA" class="java.lang.String"/>
+	<field name="numero_consecutivo" class="java.lang.String"/>
+	<field name="MEMO_DELEGADO" class="java.lang.String"/>
+	<field name="FECHA_DELEGADO" class="java.lang.String"/>
+	<field name="FECHA_TEXTO" class="java.lang.String"/>
+	<field name="NOMBRE_DELEGADO" class="java.lang.String"/>
+	<pageHeader>
+		<band height="83" splitType="Stretch">
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER} ==1]]></printWhenExpression>
+			<image>
+				<reportElement x="196" y="3" width="181" height="80" uuid="1b5a0dd3-a6f4-4dbd-a562-4f6cafe6410f"/>
+				<imageExpression><![CDATA["https://gacetamultas.atm.gob.ec/imagenes/img/logoATM_Alcaldia.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="5" width="571" height="22" uuid="7ad543c8-1119-44ea-ad93-ded84e3e9de1">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" markup="none">
+					<font size="16" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Empresa Pública Municipal de Tránsito y ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="29" width="572" height="22" uuid="f31c0c50-c94f-4f94-8b2c-77348a1c9ac0">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" markup="none">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Movilidad de Guayaquil, EPMTMG]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement x="40" y="0" width="390" height="20" uuid="d28a642b-fee7-41d0-b9ae-dfb20f6bbab8"/>
+				<textElement markup="html">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["RESOLUCIÓN No. <b>"+$F{numero_consecutivo}+"</b>"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="41" y="20" width="308" height="18" uuid="80497a34-bb64-4eb6-9880-61801ad081a5"/>
+				<textElement markup="styled">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Guayaquil, "+$F{FECHA_TEXTO}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="269">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="50" y="10" width="470" height="248" isPrintWhenDetailOverflows="true" uuid="1a5a5089-0457-4c6c-bacd-9c75b62a1db2"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font size="12" isStrikeThrough="false"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<textFieldExpression><![CDATA["En mi calidad de DELEGADO del Director de Gestión de Infracciones y Servicios de Tránsito, Ab. Mgs. Edgar Lupera Valencia, Esp., según consta en el memorando No. "+$F{MEMO_DELEGADO}+" de fecha "+$F{FECHA_DELEGADO}+", avoco conocimiento de la solicitud de sustitución de valores presentada por "+$F{NOMBRE_INFRACTOR}+" con número de identificación No. "+$F{N_DOCUMENTO_INFRACTOR}+", quien indica lo siguiente: “…, manifiesto que de manera libre y voluntaria me someto a la opción de sustitución de valores de multas relacionadas con la circulación vehicular, por educación vial virtual dispuesto por Ordenanza Municipal…”. Siendo el estado actual del expediente el de resolver, para hacerlo se considera: PRIMERO.- El artículo 130, inciso segundo del Código Orgánico de Organización Territorial, Autonomía y Descentralización establece que a los Gobiernos Autónomos Descentralizados Municipales les corresponde de forma exclusiva planificar, regular y controlar el tránsito, el transporte y la seguridad vial, dentro de su territorio cantonal, y en Guayaquil se lo ejerce a través de la Empresa Pública Municipal de Tránsito y Movilidad de Guayaquil, EP., conforme consta en el artículo 1 de la Segunda Reforma a la Ordenanza que regula su Creación y Funcionamiento, publicada en la Gaceta Oficial Municipal No. 29, del jueves 17 de diciembre de 2020, que textualmente expresa: “modifíquese a lo largo de toda la ordenanza vigente donde se nombre a la ORDENANZA QUE REGULA LA CREACIÓN Y FUNCIONAMIENTO DE LA EMPRESA PÚBLICA MUNICIPAL DE TRÁNSITO DE GUAYAQUIL EP., y de sus reformas la denominación por <style isBold='true'>“ EMPRESA PUBLICA MUNICIPAL DE TRANSITO Y MOVILIDAD DE GUAYAQUIL EP .”</style>, tiene por objeto ejercer la competencia de rectoría local, planificación, regulación, control y gestión del tránsito, transporte terrestre y seguridad vial en el cantón Guayaquil de acuerdo con la Constitución de la República y el Código Orgánico de Organización Territorial, Autonomía y Descentralización, fundamentalmente. El cumplimiento del objeto de la Empresa Pública es irrenunciable”. De conformidad con los artículos 49 y         71 del Código Orgánico Administrativo el infrascrito delegado es competente para conocer y resolver la presente solicitud de sustitución. – SEGUNDO. – No existe omisión de solemnidad sustancial que vicie de nulidad el procedimiento, de acuerdo con lo determinado en el 217 del Código Orgánico Administrativo, se declara la validez de todo lo actuado y en todas sus partes. – TERCERO. – El artículo 2 de la Ordenanza de disminución de multas relacionadas a la seguridad vial dispone el ciudadano que acepte el cometimiento de las infracciones por ingreso, invasión u obstaculización del carril exclusivo, así como, por el bloqueo de intersecciones que obstaculicen la movilización vehicular, podrá acceder a su elección al beneficio de sustitución de valores a través de educación vial virtual. – CUARTO. - Consta a foja 1 del expediente el acta de compromiso del señor "+$F{NOMBRE_INFRACTOR}+" en la que indica que se sujeta voluntariamente a la realización del curso de educación y seguridad vial virtual y que conoce que debe alcanzar la calificación mínima en la evaluación para la aplicación del beneficio de sustitución. - QUINTO. –  Conforme consta en la referida acta, a foja 4 del expediente consta el certificado digital de aprobación del curso de educación vial virtual. - Por las consideraciones que anteceden, habiendo el señor "+$F{NOMBRE_INFRACTOR}+" con identificación No. "+$F{N_DOCUMENTO_INFRACTOR}+", solicitado el beneficio de la sustitución de valores respecto de la citación de tránsito número "+$F{numero_citacion}+" del "+$F{F_IMPOSICION_COMPARENDO}+" se ha verificado que el administrado ha dado cumplimiento con el procedimiento indicado en la reforma al instructivo para la sustitución de valores.<br><br> Por lo tanto, constando el certificado de aprobación del curso en el expediente, cumpliendo con la finalidad de generar conciencia social sobre la importancia del respeto y conocimiento de las normas de tránsito, <style isBold='true'>RESUELVO: SUSTITUIR LOS VALORES CORRESPONDIENTES A MULTAS, RECARGOS Y COSTAS PROCESALES DE LA INFRACCIÓN NÚMERO "+$F{numero_citacion}+" de fecha "+$F{F_IMPOSICION_COMPARENDO}+" generada a "+$F{NOMBRE_INFRACTOR}+" con identificación No. "+$F{N_DOCUMENTO_INFRACTOR}+"</style>, debiendo reputarse pagada la infracción de la siguiente manera: 100% pagado mediante sustitución, por lo que deberá realizarse el cambio de estado en el sistema AXIS de la Autoridad de Tránsito Municipal de pendiente a pagado. Emítase oficio dirigido a la Dirección Financiera de la Empresa Pública Municipal de Tránsito de Guayaquil EP., a fin de que tenga conocimiento del pago de la citación a través de la sustitución. Actúe "+$F{NOMBRE_SECRETARIO}+" como secretario(a) ad - hoc. <style isBold='true'>- NOTIFÍQUESE Y CÚMPLASE. -</style>"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="153">
+			<image hAlign="Center">
+				<reportElement stretchType="RelativeToTallestObject" x="184" y="31" width="180" height="80" uuid="69ceddf3-dd62-47a5-84b1-7652158e38cc">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$F{IMAGEN_FIRMA}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" x="184" y="95" width="230" height="58" uuid="fc5d4dd4-e99b-4648-82f6-0028e39537ad"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{NOMBRE_DELEGADO}+" DELEGADO DEL DIRECTOR GESTIÓN DE INFRACCIONES Y SERVICIOS DE TRÁNSITO AUTORIDAD DE TRÁNSITO MUNICIPAL"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

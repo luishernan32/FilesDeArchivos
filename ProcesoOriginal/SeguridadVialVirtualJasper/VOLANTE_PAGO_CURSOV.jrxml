@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
+<!-- 2021-07-13T15:49:00 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="VolantePagoCurso_V1" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fcb0bcd5-f218-43ae-88ee-ea9aa4b84287">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="N_DOCUMENTO_INFRACTOR" class="java.lang.String"/>
+	<field name="NOMBRE_INFRACTOR" class="java.lang.String"/>
+	<field name="NUMERO_TRAMITE" class="java.lang.String"/>
+	<field name="FECHA_PAGO_CURSO" class="java.lang.String"/>
+	<field name="VALOR_FACTURA" class="java.lang.String"/>
+	<field name="TIPO_PAGO" class="java.lang.String"/>
+	<field name="NUMERO_OBLIGACION" class="java.lang.String"/>
+	<field name="BANCO" class="java.lang.String"/>
+	<field name="ESTADO" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="81" splitType="Stretch">
+			<staticText>
+				<reportElement x="3" y="42" width="146" height="13" uuid="af2f274b-3047-4b7d-99fc-4f62bfec736a">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[Comprobante de ingreso a caja]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="260" height="40" uuid="d89cd774-bcde-43a6-8c6e-2b60c6ad082d"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RECAUDACIÓN TRÁMITES ATM
+RUC 0968595620001]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<staticText>
+				<reportElement x="4" y="0" width="146" height="13" uuid="2c814c9f-2205-441e-aeb9-a97ebe998b38">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[Fecha:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="13" width="146" height="13" uuid="412910cd-64f7-4046-8e3b-c3f91ada07e4">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[Nombre:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="26" width="146" height="13" uuid="c0a0bebb-60a4-4953-b7d0-705ec0d86b29">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[Cédula/RUC:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="39" width="156" height="13" uuid="96d7785f-1b4c-467a-b64c-12f59082f97f">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[Número de Solicitud o Trámite:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="52" width="146" height="13" uuid="38d3c9ff-89a2-442a-8ba4-76d4ae42cb9b">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[Valor:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="92" width="146" height="13" uuid="0991b30b-b508-46a9-94d8-b1c18b30aa85">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[Estado:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="78" width="146" height="13" uuid="22de3ca9-221e-4f21-9a59-b2b545d8d179">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[Número de obligación:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="65" width="146" height="13" uuid="cf88dd70-b056-48a3-8ea5-0ed51f143ab3">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[Tipo Pago:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="165" y="0" width="230" height="13" uuid="768568fd-af67-4431-b874-e6e975062d04">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{FECHA_PAGO_CURSO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="165" y="13" width="230" height="13" uuid="8b800c39-7218-46d5-9acc-86ff4c4e8530">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{NOMBRE_INFRACTOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="165" y="26" width="230" height="13" uuid="4058ff4d-ba12-462b-a411-e7c62ac50bb6">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{N_DOCUMENTO_INFRACTOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="165" y="39" width="230" height="13" uuid="39c8a528-a95e-4a3a-aa98-7f74ae469a85">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{NUMERO_TRAMITE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="165" y="52" width="230" height="13" uuid="fd2d2b2f-6240-4de7-b187-b0453e347ee7">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{VALOR_FACTURA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="165" y="65" width="230" height="13" uuid="4a20f6d7-7d79-4326-b012-a3d27343cce6">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{TIPO_PAGO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="165" y="78" width="230" height="13" uuid="5711be8f-4f2f-4206-a10e-c283892f6a70">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{NUMERO_OBLIGACION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="165" y="92" width="230" height="13" uuid="40ffa2bc-1f89-49f2-ba90-40b4030c0473">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{ESTADO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
